@@ -60,7 +60,7 @@ class EventForm extends Component {
             <input
               name="title"
               onChange={this.onInputChange}
-              value={this.state.event.title}
+              value={event.title}
               placeholder="Event Name"
             />
           </Form.Field>
@@ -69,7 +69,7 @@ class EventForm extends Component {
             <input
               name="date"
               onChange={this.onInputChange}
-              value={this.state.event.date}
+              value={event.date}
               type="date"
               placeholder="Event Date"
             />
@@ -79,7 +79,7 @@ class EventForm extends Component {
             <input
               name="city"
               onChange={this.onInputChange}
-              value={this.state.event.city}
+              value={event.city}
               placeholder="City event is taking place"
             />
           </Form.Field>
@@ -88,7 +88,7 @@ class EventForm extends Component {
             <input
               name="venue"
               onChange={this.onInputChange}
-              value={this.state.event.venue}
+              value={event.venue}
               placeholder="Enter the Venue of the event"
             />
           </Form.Field>
@@ -97,7 +97,7 @@ class EventForm extends Component {
             <input
               name="hostedBy"
               onChange={this.onInputChange}
-              value={this.state.event.hostedBy}
+              value={event.hostedBy}
               placeholder="Enter the name of person hosting"
             />
           </Form.Field>
