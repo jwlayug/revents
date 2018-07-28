@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AccounttPage = () => {
+const AccountPage = () => {
   return (
     <div>
       <h1>AccountPage</h1>
@@ -8,4 +8,4 @@ const AccounttPage = () => {
   )
 }
 
-export default AccounttPage
+export default AccountPage
