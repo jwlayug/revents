@@ -8,13 +8,16 @@ import PlacesAutocomplete, {
   getLatLng
 } from "react-places-autocomplete";
 
+import { openModal } from "../modals/modalActions";
+
 const mapState = state => ({
   data: state.test.data
 });
 
 const actions = {
   incrementCounter,
-  decrementCounter
+  decrementCounter,
+  openModal
 };
 
 class TestComponent extends Component {
@@ -41,7 +44,7 @@ class TestComponent extends Component {
       value: this.state.address,
       onChange: this.onChange
     };
-    const { incrementCounter, decrementCounter, data } = this.props;
+    const { incrementCounter, decrementCounter, data, openModal } = this.props;
     return (
       <div>
         <Script
@@ -52,6 +55,11 @@ class TestComponent extends Component {
         <h3>The answer is: {data}</h3>
         <Button onClick={incrementCounter} color="green" content="Increment" />
         <Button onClick={decrementCounter} color="red" content="Decrement" />
+        <Button
+          onClick={() => openModal("TestModal", "data:43")}
+          color="teal"
+          content="Open Modal"
+        />
         <br />
         <br />
         <form onSubmit={this.handleFormSubmit}>
